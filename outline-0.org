@@ -1,0 +1,49 @@
+#+TITLE: Java Class: Week 0 (13 June)
+
+* Intro
+*** Instructor
+***** phd student at ut
+***** worked as a professional software engineer
+***** been programming for a long time
+***** started with Logo, know Java, C, Python, Go, Javascript, Ruby...
+*** Goals of the class
+***** learn some parts of a programming language
+***** learn what programming is like
+***** discover whether programming is an interest
+*** About the class
+***** taking algebra?
+***** interest in programming?
+***** why are you taking the class?
+***** email? apps on phone? ...
+* About Computers
+*** What is a computer
+***** computers are everywhere!
+***** comparison: hardware in 1984 (IBM PC/AT) vs 2014 (Moto G) vs 2044 (?)
+*** Basic architecture
+***** often have cpu + memory + storage
+*** Bits ("binary digits")
+***** manipulate bits ==> on/off ==> high/low voltage              :exercise:
+***** converting from base 10 to base 2
+* Basics
+*** Arithmetic
+***** order of operations                                          :exercise:
+***** bitwise operations                                           :exercise:
+*** Strings
+***** represent sequences of characters
+***** enclosed in double quotes
+***** display messages to user of program
+***** System.out.println
+***** escaping
+* Installing a Java Development Environment
+* Homework
+*** Convert following to binary
+
+3, 1, 52, 13, 0, 26
+
+*** Write as binary
+
+3 & 4, 1 & 15, 0 & 7, 4 & 7
+3 | 4, 1 | 15, 0 | 7, 4 | 7
+3 ^ 4, 1 ^ 15, 0 ^ 7, 4 ^ 7
+3 * 4, 1 * 15, 0 * 7, 4 * 7
+3 + 4, 1 + 15, 0 + 7, 4 + 7

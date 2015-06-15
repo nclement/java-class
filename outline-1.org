@@ -1,0 +1,23 @@
+#+TITLE: Java Class: Week 1 (20 June)
+
+* What is Java
+*** What is programming
+***** like writing a recipe                                        :exercise:
+***** like "playing with legos using words"
+***** video -- game developers?
+***** interface with computer using language
+***** language has syntax and semantics                             :example:
+*** programming language
+*** compiler -- translates language to machine code
+*** statically typed
+* Compiling/Running
+* Writing output
+* Escaping in strings
+*** How many characters are printed?
+
+"hello world!"
+"\""
+"\\'\\\\\""
+"\n"
+" here  we  are"
+
