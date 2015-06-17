@@ -1,15 +1,15 @@
 #+TITLE: Java Summer Class Outline
 
-* [13 Jun] introduction
-* [20 Jun] java
-* [27 Jun] primitive types (PEMDAS)
-* [ 4 Jul] if/else
-* [11 Jul] while/do while                                                :SF:
-* [18 Jul] Class 5
-* [25 Jul] Class 6
-* [ 1 Aug] Class 7
-* [ 8 Aug] Class 8
-* [15 Aug] Class 9
+* [13 Jun] introduction, architecture
+* [20 Jun] java, strings, println
+* [27 Jun] methods, primitive types (PEMDAS)
+* [ 4 Jul] arguments (the stack)
+* [11 Jul] if/else                                                     :SF:
+* [18 Jul] for loops
+* [25 Jul] while/do while loops
+* [ 1 Aug] arrays
+* [ 8 Aug] array algorithms
+* [15 Aug] multiple dimension arrays
 
 * Resources
 *** Learning
@@ -21,7 +21,6 @@
 ***** http://codingbat.com/java
 ***** http://projecteuler.net
 ***** http://spoj.com
-
 *** Tools
 ***** http://www.bluej.org
 ***** http://www.sublimetext.com/3
