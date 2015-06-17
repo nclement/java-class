@@ -1,18 +1,49 @@
 #+TITLE: Java Class: Week 1 (20 June)
 
+* Intro
+*** Review last class: binary numbers, bitwise operations
+*** Goals for this class
+* Why program?
+*** Need to solve a problem
+- compute the average of a lot of numbers
+- suggest spelling corrections to a person
+- schedule routes for delivery trucks
+*** Computer scientists devise algorithms to solve these problems
+***** Algorithm: like a recipe                             :exercise:
+* What is programming
+In an important sense, programming is the translation of an algorithm into
+instructions for a computer to follow.
+*** But computers operate using bits?
+*** Languages allow control at a higher level
+- Machine code: bits
+- Assembly: mnemonics
+- High-level languages: blocks
+*** Language has syntax and semantics                               :example:
 * What is Java
-*** What is programming
-***** like writing a recipe                                        :exercise:
-***** like "playing with legos using words"
-***** video -- game developers?
-***** interface with computer using language
-***** language has syntax and semantics                             :example:
-*** programming language
-*** compiler -- translates language to machine code
-*** statically typed
-* Compiling/Running
+*** Bytecode compiler -- translates high-level syntax to machine code
+***** Runs on a "virtual machine"
+The virtual machine allows a single Java program to run on lots of different
+underlying hardware architectures (e.g., phones, desktops, mainframes).
+*** Statically typed
+*** Garbage-collected
+Memory is managed for you by the virtual machine.
+*** Object-oriented
+Code is grouped into logical "objects" that combine data with functions for
+manipulating the data.
+* First example program
+public class Hello {
+    public static int main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
 * Writing output
-* Escaping in strings
+***** order of operations                                          :exercise:
+* Strings
+*** represent sequences of characters
+*** enclosed in double quotes
+*** display messages to user of program
+*** System.out.println
+*** escaping
 *** How many characters are printed?
 
 "hello world!"
@@ -21,3 +52,10 @@
 "\n"
 " here  we  are"
 
+* More Info
+*** Slides
+http://www.cs.utexas.edu/~scottm/cs312/handouts/slides/topic2JavaBasics.pdf
+*** Hard Way
+https://learnjavathehardway.org/book/ex01.html
+https://learnjavathehardway.org/book/ex02.html
+https://learnjavathehardway.org/book/ex04.html
