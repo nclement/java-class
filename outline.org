@@ -2,14 +2,14 @@
 
 * [13 Jun] introduction, architecture
 * [20 Jun] java, strings, println
-* [27 Jun] methods, primitive types (PEMDAS)
-* [ 4 Jul] arguments (the stack)
-* [11 Jul] if/else                                                     :SF:
-* [18 Jul] for loops
-* [25 Jul] while/do while loops
+* [27 Jun] methods, variables (PEMDAS)
+* [ 4 Jul] variables, for loops
+* [11 Jul] generating ascii art                           :SF:
+* [18 Jul] reading input, if/else
+* [25 Jul] parameters
 * [ 1 Aug] arrays
 * [ 8 Aug] array algorithms
-* [15 Aug] multiple dimension arrays
+* [15 Aug] graphics
 
 * Resources
 *** Learning
