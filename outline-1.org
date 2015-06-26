@@ -10,47 +10,73 @@
 - schedule routes for delivery trucks
 *** Computer scientists devise algorithms to solve these problems
 ***** Algorithm: like a recipe                             :exercise:
+Exercise: write down a recipe for making cookies.
+
+High level:
+- Gather ingredients
+- Mix ingredients
+- Place on cookie sheet
+- Bake
+
+Lower level needed to break down steps into unambiguous parts. "Gather
+ingredients" might become:
+- Measure out 1c flour, 1c butter, etc.
+- Be sure to use semi-sweet chocolate!
+- Etc.
 * What is programming
 In an important sense, programming is the translation of an algorithm into
 instructions for a computer to follow.
-*** But computers operate using bits?
+
+But computers operate using bits?!
 *** Languages allow control at a higher level
 - Machine code: bits
 - Assembly: mnemonics
 - High-level languages: blocks
 *** Language has syntax and semantics                               :example:
-* What is Java
-*** Bytecode compiler -- translates high-level syntax to machine code
-***** Runs on a "virtual machine"
-The virtual machine allows a single Java program to run on lots of different
-underlying hardware architectures (e.g., phones, desktops, mainframes).
-*** Statically typed
-*** Garbage-collected
-Memory is managed for you by the virtual machine.
-*** Object-oriented
-Code is grouped into logical "objects" that combine data with functions for
-manipulating the data.
+Consider these sentences:
+- the dog ate the spaghetti with meatballs
+- ate the the with dog meatballs spaghetti
+
+The second one doesn't make any sense because it violates the rules of syntax in
+English. This is a "syntax error."
+
+Now consider:
+- colorless green ideas sleep furiously
+
+All of the words in this sentence make sense in their syntactic roles, but this
+sentence doesn't make sense because the words together violate the rules of
+semantics ("meaning") -- what is a "colorless green idea"?
 * First example program
 public class Hello {
     public static int main(String[] args) {
         System.out.println("Hello, world!");
     }
 }
-* Writing output
-***** order of operations                                          :exercise:
 * Strings
 *** represent sequences of characters
 *** enclosed in double quotes
 *** display messages to user of program
 *** System.out.println
 *** escaping
-*** How many characters are printed?
+To include " inside a string, it must be *escaped* by preceding it with a
+backslash \:
 
-"hello world!"
-"\""
-"\\'\\\\\""
-"\n"
-" here  we  are"
+\" -> escaped double quote
+
+If you want to include a \ inside a string, it must be escaped too:
+
+\\ -> escaped backslash
+
+System.out.println("\""); // prints "
+System.out.println("\"\\"); // prints "\
+
+*** How many visible characters are printed?
+
+"hello world!" 11
+"\"" 1
+"\\'\\\\\"" 5
+"\n" 0
+" here  we  are" 9
 
 * More Info
 *** Slides
