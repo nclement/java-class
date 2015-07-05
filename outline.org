@@ -2,15 +2,14 @@
 
 * [13 Jun] introduction, architecture
 * [20 Jun] java, strings, println
-* [27 Jun] methods, variables (PEMDAS)
-* [ 4 Jul] variables, for loops
-* [11 Jul] generating ascii art                           :SF:
+* [27 Jun] methods, variables i, PEMDAS
+* [ 4 Jul] variables ii
+* [11 Jul] parameters, return types
 * [18 Jul] reading input, if/else
-* [25 Jul] parameters
+* [25 Jul] loops (for, while)
 * [ 1 Aug] arrays
 * [ 8 Aug] array algorithms
 * [15 Aug] graphics
-
 * Resources
 *** Learning
 ***** Java tutorials
