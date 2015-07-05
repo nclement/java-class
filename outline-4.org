@@ -1,0 +1,30 @@
+#+TITLE: Java Class: Week 4 (10 July)
+
+* Intro
+*** Last time: methods and variables (practice)
+*** This time: parameters and return values, scanner
+* Parameters
+*** A way to communicate variables into a method
+Parameter declarations go between the parentheses in your method definition:
+
+  public static void printInteger(int x) {
+    System.out.println(x);
+  }
+
+When you call your method you must provide a value of the correct type:
+
+  printInteger(3);
+  printInteger(-81829);
+*** Multiple values can be passed as parameters
+  public static void printStars(char star, char separator) {
+    System.out.println(star + separator + star);
+  }
+* Return values
+*** A way to communicate a variable out of a method
+Method type is declared along with method:
+
+  public static double computeTax(double amount, double taxRate) { ... }
+
+Value gets "sent back" from method using "return":
+
+    return amount * taxRate;
