@@ -27,12 +27,29 @@ When a Java class is run as the "main" program, the following method is called:
 // everything from // to the end of the line is a comment
 * Methods
 *** Group together logical chunks of operations
+To define a method:
+
+  public static void myMethod() {
+  // ... put statements here, like System.out.println("hi");
+  }
+
+To invoke or "call" a method:
+
+  myMethod();
 *** Important to have good names
   public static void c() { ... } // not so great
 
   public static void printChorus() { ... } // not so great
 *** Bottom-up way of defining methods                               :example:
+To define methods "bottom-up", think of your program as a long sequence of
+commands to be executed. Then find repetition in the sequence, and replace
+repeated chunks with methods.
 *** Top-down way of defining methods                                :example:
+To define methods "top-down", think of how your program "should" work and write
+method calls. Then define those methods.
+*** Methods can call each other!
+If there is a loop in a sequence of method calls, your program will run without
+stopping, until it runs out of memory. This generates a Stack Overflow!
 * Variables
 *** Names for places in the computer's memory
 *** Hold specific types of information
