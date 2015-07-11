@@ -318,34 +318,42 @@ with the appropriate type (e.g., strings should include double quotes, doubles
 should include the .):
 
 1.
-    double r = 4.0;
-    int t = 2;
-    System.out.println(r / t * 9 / t);
+
+        double r = 4.0;
+        int t = 2;
+        System.out.println(r / t * 9 / t);
 2.
-    double x = 2.5;
-    double y = 5.0;
-    int z = 10;
-    System.out.println(x * 2 + 8 / y + z / 3);
+
+        double x = 2.5;
+        double y = 5.0;
+        int z = 10;
+        System.out.println(x * 2 + 8 / y + z / 3);
 3.
-    int a = 12;
-    int b = 2;
-    int c = 7
-    System.out.println(a / c * 4.4 * b / 4);
+
+        int a = 12;
+        int b = 2;
+        int c = 7
+        System.out.println(a / c * 4.4 * b / 4);
 4.
-    double z = 2.5 + 3.5
-    System.out.println(z / 2);
+
+        double z = 2.5 + 3.5
+        System.out.println(z / 2);
 5.
-    double two = 2.0;
-    double three = 1.5;
-    int rem = 89 % 10;
-    double half = 1.0 / 2;
-    System.out.println(rem / 4 * two / 5 + (three + half) * 2);
+
+        double two = 2.0;
+        double three = 1.5;
+        int rem = 89 % 10;
+        double half = 1.0 / 2;
+        System.out.println(rem / 4 * two / 5 + (three + half) * 2);
 6.
-    System.out.println("41 % 7" + 5 / 2 + 2);
+
+        System.out.println("41 % 7" + 5 / 2 + 2);
 7.
-    System.out.println(813 % 100 + "3" + 2.4);
+
+        System.out.println(813 % 100 + "3" + 2.4);
 8.
-    System.out.println(3 + 7 + "2 + 2" + 3 + 1);
+
+        System.out.println(3 + 7 + "2 + 2" + 3 + 1);
 
 ### Egg figure
 
