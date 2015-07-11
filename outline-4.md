@@ -286,6 +286,14 @@ variables:
 
 ## Homework
 
+It's important to practice these concepts until you've really got them down.
+
+This week I've written up more explicit homework problems than we've had before.
+
+Please try the exercises below to get some practice. Don't worry if you get
+confused or can't do some of them, just bring in what you get and we'll go over
+it in next week's class.
+
 ### Strings and escaping
 
 What is the output of the following program?
