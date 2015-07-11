@@ -1,15 +1,23 @@
-#+TITLE: Java Class: Week 1 (20 June)
+# Java Class: Week 1 (20 June)
 
-* Intro
-*** Review last class: binary numbers, bitwise operations
-*** Goals for this class
-* Why program?
-*** Need to solve a problem
+## Intro
+
+### Review last class: binary numbers, bitwise operations
+
+### Goals for this class
+
+## Why program?
+
+### Need to solve a problem
+
 - compute the average of a lot of numbers
 - suggest spelling corrections to a person
 - schedule routes for delivery trucks
-*** Computer scientists devise algorithms to solve these problems
-***** Algorithm: like a recipe                             :exercise:
+
+### Computer scientists devise /algorithms/ to solve these problems
+
+Algorithm: like a recipe.
+
 Exercise: write down a recipe for making cookies.
 
 High level:
@@ -24,15 +32,20 @@ ingredients" might become:
 - Be sure to use semi-sweet chocolate!
 - Etc.
 * What is programming
+
 In an important sense, programming is the translation of an algorithm into
 instructions for a computer to follow.
 
 But computers operate using bits?!
-*** Languages allow control at a higher level
+
+### Languages allow control at a higher level
+
 - Machine code: bits
 - Assembly: mnemonics
 - High-level languages: blocks
-*** Language has syntax and semantics                               :example:
+
+### Language has syntax and semantics
+
 Consider these sentences:
 - the dog ate the spaghetti with meatballs
 - ate the the with dog meatballs spaghetti
@@ -46,20 +59,25 @@ Now consider:
 All of the words in this sentence make sense in their syntactic roles, but this
 sentence doesn't make sense because the words together violate the rules of
 semantics ("meaning") -- what is a "colorless green idea"?
-* First example program
-public class Hello {
-    public static int main(String[] args) {
-        System.out.println("Hello, world!");
+
+## First example program
+
+    public class Hello {
+        public static int main(String[] args) {
+            System.out.println("Hello, world!");
+        }
     }
-}
-* Strings
-*** represent sequences of characters
-*** enclosed in double quotes
-*** display messages to user of program
-*** System.out.println
-*** escaping
+
+## Strings
+
+- represent sequences of characters
+- enclosed in double quotes
+- display messages to user of program: System.out.println(message)
+
+### escaping
+
 To include " inside a string, it must be *escaped* by preceding it with a
-backslash \:
+backslash (\):
 
 \" -> escaped double quote
 
@@ -70,18 +88,27 @@ If you want to include a \ inside a string, it must be escaped too:
 System.out.println("\""); // prints "
 System.out.println("\"\\"); // prints "\
 
-*** How many visible characters are printed?
+### Special characters
 
-"hello world!" 11
-"\"" 1
-"\\'\\\\\"" 5
-"\n" 0
-" here  we  are" 9
+There are several "whitespace" characters that are commonly used. They are not
+visible, but instead move the "cursor" around when printing things.
 
-* More Info
-*** Slides
+- space character: ' '
+- newline character: '\n'
+- tab character: '\t'
+
+### How many visible characters are printed?
+
+    "hello world!" (11)
+    "\"" (1)
+    "\\'\\\\\"" (5)
+    "\n" (0)
+    " here  we  are" (9)
+
+## More Info
+
 http://www.cs.utexas.edu/~scottm/cs312/handouts/slides/topic2JavaBasics.pdf
-*** Hard Way
-https://learnjavathehardway.org/book/ex01.html
-https://learnjavathehardway.org/book/ex02.html
-https://learnjavathehardway.org/book/ex04.html
+
+- https://learnjavathehardway.org/book/ex01.html
+- https://learnjavathehardway.org/book/ex02.html
+- https://learnjavathehardway.org/book/ex04.html
