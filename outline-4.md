@@ -286,6 +286,67 @@ variables:
 
 ## Homework
 
+### Strings and escaping
+
+What is the output of the following program?
+
+    public class Letter {
+      public static void main() {
+        System.out.println("Dear \"DoubleSlash\" magazine,");
+        System.out.println();
+        System.out.println("Your publication confuses me.  Is it");
+        System.out.println("a \\\\ slash or a //// slash?");
+        System.out.println("\nSincerely,");
+        System.out.println("Susan \"Suzy\" Smith");
+      }
+    }
+
+## Expressions and variables
+
+Do these exercises. Write the answers out on paper.
+
+1. http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s1-legalIntLiterals
+2. http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s4-expressions3
+3. http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s5-declareRealNumberSyntax
+4. http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+2&problem=bjp3-2-s6-fitnessVariables
+
+For exercise 1 and 3, write out both the code and the answer (they are ordered
+randomly each time you load the page).
+
+Write the output of the following code snippets. Be sure to write the expression
+with the appropriate type (e.g., strings should include double quotes, doubles
+should include the .):
+
+1.
+    double r = 4.0;
+    int t = 2;
+    System.out.println(r / t * 9 / t);
+2.
+    double x = 2.5;
+    double y = 5.0;
+    int z = 10;
+    System.out.println(x * 2 + 8 / y + z / 3);
+3.
+    int a = 12;
+    int b = 2;
+    int c = 7
+    System.out.println(a / c * 4.4 * b / 4);
+4.
+    double z = 2.5 + 3.5
+    System.out.println(z / 2);
+5.
+    double two = 2.0;
+    double three = 1.5;
+    int rem = 89 % 10;
+    double half = 1.0 / 2;
+    System.out.println(rem / 4 * two / 5 + (three + half) * 2);
+6.
+    System.out.println("41 % 7" + 5 / 2 + 2);
+7.
+    System.out.println(813 % 100 + "3" + 2.4);
+8.
+    System.out.println(3 + 7 + "2 + 2" + 3 + 1);
+
 ### Egg figure
 
 Write a program that generates the following output:
@@ -317,21 +378,3 @@ repetition.
 Hint: make sure you escape the backslashes (\) and double quotes (")!
 
 http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+1&problem=bjp3-1-e10-Egg2
-
-### Program tracing
-
-What is the output of the following programs?
-
-Letter:
-
-    public class Letter {
-      public static void main() {
-        System.out.println("Dear \"DoubleSlash\" magazine,");
-        System.out.println();
-        System.out.println("\tYour publication confuses me.  Is it");
-        System.out.println("a \\\\ slash or a //// slash?");
-        System.out.println("\nSincerely,");
-        System.out.println("Susan \"Suzy\" Smith");
-      }
-    }
-
