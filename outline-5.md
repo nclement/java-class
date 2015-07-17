@@ -135,7 +135,17 @@ Example:
 
 ## Homework
 
+[Fibonacci Series](http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e3-fibonacci)
 
+[Wave Numbers](http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e9-waveNumbers40)
+
+[Numbers and Spaces](http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e8-spacesAndNumbers)
+
+For all three of these exercises, write a complete Java program to produce the
+output. You don't have to use any custom methods, but you do have to use
+``while`` loops---sometimes nested ones!
+
+Don't use ``for`` loops; we'll talk about them next time.
 
 ## Resources
 
