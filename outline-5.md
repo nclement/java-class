@@ -133,6 +133,61 @@ Example:
     }
     System.out.println("Liftoff!");
 
+### Nested loops
+
+You can also "nest" loops inside each other.
+
+For instance, try out this code:
+
+    int rows = 10;
+    while (rows != 0) {
+      int columns = 12;
+      while (columns != 0) {
+        System.out.print("*");
+        columns--;
+      }
+      System.out.println();
+      rows--;
+    }
+
+What does it print when you run it? Try changing the numbers of rows and columns
+and running the code again.
+
+### Computing with loops
+
+Loops are really powerful programming concepts. Once you define a loop, you can
+add extra computations to it. Let's say you want to print out a times table:
+
+    int highest = 10;
+
+    // print out a header row.
+    int column = 1;
+    while (column <= highest) {
+      System.out.print("\t" + column);
+      column++;
+    }
+    System.out.println();
+    System.out.println("\t---------------------------------------------------------------------------");
+
+    // print out a times table.
+    int row = 1;
+    while (row <= highest) {
+      int col = 1;
+      System.out.print(row);
+      while (col <= highest) {
+        System.out.print("\t" + (row * col));
+        col++;
+      }
+      System.out.println();
+      row++;
+    }
+
+Try changing the "highest" value and see what happens. How do you think you'd
+need to change the code to get the line of dashes to match the times table?
+
+How do you think you could write a vertical column of pipes (``|``) between the
+first and second column of numbers in the table?
+
 ## Homework
 
 [Fibonacci Series](http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e3-fibonacci)
@@ -145,7 +200,7 @@ For all three of these exercises, write a complete Java program to produce the
 output. You don't have to use any custom methods, but you do have to use
 ``while`` loops---sometimes nested ones!
 
-Don't use ``for`` loops; we'll talk about them next time.
+(Don't use ``for`` loops for these exercises; we'll talk about them next time.)
 
 ## Resources
 
