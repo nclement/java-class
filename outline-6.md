@@ -2,74 +2,163 @@
 
 ## Intro
 
-### Last time: if/else, loops
+### Last time: scanner, if/else, while loops
 
-### This time: parameters, return values, scanner
+### This time: for loops, return values
 
-## Parameters
+## For loops
 
-A parameter is a way to communicate a variable to a method.
+We've seen one loop construct so far: ``while``.
 
-Parameter declarations go between the parentheses in your method definition:
-
-    public static void printInteger(int x) {
-      System.out.println(x);
+    int count = 10;
+    while (count != 0) {
+      System.out.println("Hello! " + count + " left to go ...");
+      count--;
     }
 
-When you call your method you must provide a value of the correct type:
+In this loop we have a counter variable that keeps track of the number of times
+we've run the loop.
 
-    printInteger(3);
-    printInteger(-81829);
+This pattern of looping is so common that there's a special syntax for it: the
+``for`` loop:
 
-### Multiple values can be passed as parameters
-
-    public static void printStars(char star, char separator) {
-      System.out.println(star + separator + star);
+    for (int count = 10; count != 0; count--) {
+      System.out.println("Hello! " + count + " left to go ...");
     }
+
+Basically the initialization and decrement are moved inside the parentheses in
+the ``for`` loop.
+
+The generic syntax is:
+
+    for (<init statement>; <boolean expression>; <incr statement>) {
+      <statement>;
+      <statement>;
+      // ...
+    }
+
+The initialization statement typically creates a variable to keep track of the
+number of loop iterations, the loop continues as long as the boolean expression
+is ``true``, and the increment (or decrement) statement is run after each
+iteration through the loop.
+
+### Practice: squares of numbers
+
+Write a single for loop that prints out the squares of each integer from ``0``
+through some upper limit ``n``.
+
+### Practice: number triangle
+
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e15-printDesign
+
+Write a series of nested for loops to generate the following output:
+
+    -----1-----
+    ----333----
+    ---55555---
+    --7777777--
+    -999999999-
 
 ## Return values
 
-A return value is a way to communicate a variable out of a method.
+So far we've looked at methods that just contain statements. These methods
+cannot share information, they can only do things like print, get inputs, or
+call other methods.
 
-Method type is declared along with method:
+We can change that by *returning* a value from a method. A return value is a way
+to communicate a value to the *caller* of a method.
 
-    public static double computeTax(double amount, double taxRate) { ... }
+Methods that do not return a value are declared ``void``. (So far all the
+methods we've written are ``void``.)
 
-Value gets "sent back" from method using "return":
+Calling a ``void`` method is a *statement*, e.g.:
 
-    return amount * taxRate;
+    System.out.println("Hello!"); // does not return a value
 
-## Scanner
+Calling a non-``void`` method is an *expression*:
 
-A way to get input values into your program.
+    double s = Math.sqrt(10);
 
-Put this at the top of your program file:
+### Declaring a method with a return type
 
-    import java.util.Scanner;
+Before we defined only ``void`` methods:
 
-Then, inside a method:
+    public static void <name>() {
+      return <expression>;
+    }
 
-    Scanner console = new Scanner(System.in);
+It turns out ``void`` is a special keyword representing a "non-type" of data. In
+general the return type of a method is declared along with the method:
 
-You can use it by calling methods on the console:
+    public static <type> <name>() {
+      return <expression>;
+    }
 
-    double d = console.nextDouble();
-    int i = console.nextInt();
-    String word = console.next();
-    String line = console.nextLine();
+For example, this method computes the tax on a bill by asking the user for
+appropriate values. It prints out the tax amount:
 
-Each of these methods returns a value of the appropriate type based on what is
-typed into the console window.
+    public static void computeTax() {
+      Scanner console = new Scanner(System.in);
+      System.out.print("Enter the amount of the bill: ");
+      var bill = console.nextDouble();
+      System.out.print("Enter the tax rate: ");
+      var tax = console.nextDouble();
+      System.out.println("The tax is: " + (bill * tax));
+    }
 
-## Example: bill calculator
+This method can be changed to return the tax instead:
 
-Write a program that asks the user for three prices and a tax rate, and computes
-the subtotal, the tax, and the total bill.
+    public static double computeTax() {
+      Scanner console = new Scanner(System.in);
+      System.out.print("Enter the amount of the bill: ");
+      var bill = console.nextDouble();
+      System.out.print("Enter the tax rate: ");
+      var rate = console.nextDouble();
+      return bill * rate;
+    }
+
+This value gets "sent back" to the caller:
+
+    public static void main() {
+      double tax = computeTax();
+      System.out.println("The tax is: " + tax);
+    }
+
+### Math methods
+
+There are many built-in methods in the ``Math`` class that return values:
+
+    Math.abs(-4.0);  // absolute value
+    Math.pow(3, 4);  // computes x to the y power
+    Math.sqrt(4.4);  // square root
+    Math.exp(1.2);   // exponential function
+    Math.sin(0.2);   // sin function
+    Math.log(1221);  // logarithm
 
 ## Homework
 
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s13-mathExpressions
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s14-parameterMysteryReturn
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s6-parameterMysteryNumbers
+### Fibonacci numbers
 
-- Do five exercises from "Warmup-1" at http://codingbat.com/java
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+2&problem=bjp3-2-e3-fibonacci
+
+Write a single for loop inside a main method that prints out the first 10
+Fibonacci numbers.
+
+### Quadratic equation solver
+
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+3&problem=bjp3-3-e8-quadratic
+
+(Instead of parameters, use a ``Scanner`` to get the ``a``, ``b``, and ``c``
+values from the user.)
+
+### Square printer
+
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+3&problem=bjp3-3-e4-printSquare
+
+(Instead of parameters, use a ``Scanner`` to get the values of ``min`` and
+``max`` from the user.)
+
+## Resources
+
+http://www.cs.utexas.edu/~scottm/cs312/handouts/slides/topic5_for_loops_nested_loops_4Up.pdf
+http://www.cs.utexas.edu/~scottm/cs312/handouts/slides/topic6_loops_figures_constants_4Up.pdf

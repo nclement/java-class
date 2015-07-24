@@ -5,9 +5,9 @@
 2. [27 Jun] methods, variables i, PEMDAS
 3. [ 4 Jul] variables ii
 4. [11 Jul] statements & expressions
-5. [18 Jul] if/else, while loops
-6. [25 Jul] for loops, nested loops
-7. [ 1 Aug] parameters & return values
+5. [18 Jul] scanner, if/else, while loops
+6. [25 Jul] for loops, return values
+7. [ 1 Aug] parameters & memory
 8. [ 8 Aug] arrays
 9. [15 Aug] array algorithms
 
