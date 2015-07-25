@@ -1,4 +1,14 @@
+# Java Class: Week 8 (8 August)
+
+## Intro
+
+### Last time: parameters, return values, scope
+
+### This time: memory, pointers, objects
+
 ## String methods
+
+http://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
 Strings in Java are different from other basic types -- they are "objects."
 
@@ -26,10 +36,6 @@ In Java, a variable names a piece of memory that's as big as the memory
 architecture of the machine. For example, on a 64-bit Java Virtual Machine, each
 ``double``, ``int``, ``boolean``, etc. is a name for 64 bits (8 Bytes) of
 memory.
-
-### Scope
-
-Each variable in a Java program has a limited visibility.
 
 ### Pointers
 

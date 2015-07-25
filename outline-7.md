@@ -1,10 +1,10 @@
-# Java Class: Week 7 (1 Aug)
+# Java Class: Week 7 (1 August)
 
 ## Intro
 
 ### Last time: for loops, nested loops
 
-### This time: parameters, return values, memory
+### This time: parameters, return values, scope
 
 ## Parameters
 
@@ -113,7 +113,8 @@ This value gets "sent back" to the caller:
 
 ## Math methods
 
-There are many built-in methods in the ``Math`` class that return values:
+There are many built-in methods in the ``Math`` class that take parameters and
+return values:
 
     Math.abs(-4.0);  // absolute value
     Math.pow(3, 4);  // computes x to the y power
@@ -122,6 +123,10 @@ There are many built-in methods in the ``Math`` class that return values:
     Math.sin(0.2);   // sin function
     Math.log(1221);  // logarithm
 
+### Scope
+
+Each variable in a Java program has a limited visibility.
+
 ## Homework
 
 - http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s13-mathExpressions
@@ -129,6 +134,13 @@ There are many built-in methods in the ``Math`` class that return values:
 - http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s6-parameterMysteryNumbers
 
 - Do five exercises from "Warmup-1" at http://codingbat.com/java
+
+### Quadratic equation solver
+
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+3&problem=bjp3-3-e8-quadratic
+
+(In your main method, use a ``Scanner`` to get the ``a``, ``b``, and ``c``
+values from the user.)
 
 ## Resources
 
