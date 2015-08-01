@@ -6,46 +6,6 @@
 
 ### This time: parameters, return values, scope
 
-## Parameters
-
-A parameter is a way to communicate a variable to a method.
-
-Parameter declarations go between the parentheses in your method definition:
-
-    public static <type> <name>(<type> <name>) { ... }
-
-For example, here's a method that prints out some integer:
-
-    public static void printInteger(int x) {
-      System.out.println(x);
-    }
-
-When you call your method you must provide a value of the correct type:
-
-    printInteger(3);
-    printInteger(-81829);
-
-### Multiple values can be passed as parameters
-
-To include multiple parameters, just add more type/name pairs with commas in
-between them:
-
-    public static <type> <name>(<type> <name>, <type> <name>, ...) { ... }
-
-When you call the method, you need to include the appropriate number of
-expressions.
-
-For example, here's a method that prints out two star characters separated by
-some other character:
-
-    public static void printStars(char star, char separator) {
-      System.out.println(star + separator + star);
-    }
-
-When it's called:
-
-    printStars('x', '*');  // prints out "x*x"
-
 ## Return values
 
 So far we've looked at methods that just contain statements. These methods
@@ -111,6 +71,46 @@ This value gets "sent back" to the caller:
       System.out.println("The tax is: " + tax);
     }
 
+## Parameters
+
+A parameter is a way to communicate a variable to a method.
+
+Parameter declarations go between the parentheses in your method definition:
+
+    public static <type> <name>(<type> <name>) { ... }
+
+For example, here's a method that prints out some integer:
+
+    public static void printInteger(int x) {
+      System.out.println(x);
+    }
+
+When you call your method you must provide a value of the correct type:
+
+    printInteger(3);
+    printInteger(-81829);
+
+### Multiple values can be passed as parameters
+
+To include multiple parameters, just add more type/name pairs with commas in
+between them:
+
+    public static <type> <name>(<type> <name>, <type> <name>, ...) { ... }
+
+When you call the method, you need to include the appropriate number of
+expressions.
+
+For example, here's a method that prints out two star characters separated by
+some other character:
+
+    public static void printStars(char star, char separator) {
+      System.out.println(star + separator + star);
+    }
+
+When it's called:
+
+    printStars('x', '*');  // prints out "x*x"
+
 ## Math methods
 
 There are many built-in methods in the ``Math`` class that take parameters and
@@ -127,20 +127,46 @@ return values:
 
 Each variable in a Java program has a limited visibility.
 
+In general, the scope of a variable is limited to the smallest set of curly
+braces that contains that variable.
+
+For instance, a variable declared inside a method (including parameters) is
+scoped to that method:
+
+    public static void first(int x) {
+      System.out.println(x);
+    }
+
+    public static void second() {
+      int y = 4;
+      System.out.println(y); // This is ok.
+      System.out.println(x); // Error -- x is only defined in first!
+      for (int i = 0; i < 4; i++) {
+        int z = 4;
+        System.out.println(y * z + i);
+      }
+      System.out.println(y * z + i); // Error -- i is out of scope!
+    }
+
 ## Homework
 
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s13-mathExpressions
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s14-parameterMysteryReturn
-- http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs%2C+3rd+edition%2FBJP3+Chapter+3&problem=bjp3-3-s6-parameterMysteryNumbers
-
 - Do five exercises from "Warmup-1" at http://codingbat.com/java
+- Do five exercises from "Logic-1" at http://codingbat.com/java
 
 ### Quadratic equation solver
 
-http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+3&problem=bjp3-3-e8-quadratic
+Implement a class called ``Solver`` that contains a ``main`` method and a
+``solve`` method.
 
-(In your main method, use a ``Scanner`` to get the ``a``, ``b``, and ``c``
-values from the user.)
+In your main method, use a ``Scanner`` to get the ``a``, ``b``, and ``c``
+values from the user.
+
+The ``solve`` method should accept three parameters (``a``, ``b``, and ``c``)
+and return the first root (the one with the plus instead of the minus).
+
+You can use the ``Math.sqrt(x)`` method to compute the square root of ``x``.
+
+http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+3&problem=bjp3-3-e8-quadratic
 
 ## Resources
 
