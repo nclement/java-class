@@ -8,8 +8,8 @@
 5. [18 Jul] scanner, if/else, while loops
 6. [25 Jul] for loops, nested loops
 7. [ 1 Aug] parameters, return values, scope
-8. [ 8 Aug] strings, memory, objects
-9. [15 Aug] arrays
+8. [ 8 Aug] strings
+9. [15 Aug] files
 
 ## Resources
 
