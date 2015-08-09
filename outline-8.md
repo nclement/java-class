@@ -144,29 +144,6 @@ the ``equals()`` method. For example:
     System.out.println(s.equals("hello"));  // true
     System.out.println(s.equals(t));  // true
 
-### Example: swap pairs
-
-In this problem, we are to create a new string by swapping pairs of characters
-from the original string. In the solution below, we loop over the string,
-increasing our loop index by two each time. Then we append the second character
-first, and the first character second:
-
-    public static String swapPairs(String original) {
-      String result = "";
-      for (int i = 1; i < original.length(); i += 2) {
-        result += original.charAt(i)
-        result += original.charAt(i - 1);
-      }
-      if (original.length() % 2 == 1) {
-        result += original.charAt(original.length() - 1);
-      }
-      return result;
-    }
-
-We need a test at the end to check whether the original string had an odd number
-of characters; if so, the last character just gets appended to the end of our
-result.
-
 ### Example: word count
 
 http://practiceit.cs.washington.edu/problem.jsp?category=Building+Java+Programs,+3rd+edition/BJP3+Chapter+4&problem=bjp3-4-e18-wordCount
@@ -208,6 +185,8 @@ Do at least:
 - three of the exercises from http://codingbat.com/java/String-1
 - two of the exercises from http://codingbat.com/java/String-2
 - one of the exercises from http://codingbat.com/java/String-3
+
+Print out your solutions to the six problems to hand in next class time.
 
 ## Resources
 
