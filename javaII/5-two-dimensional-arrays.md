@@ -8,6 +8,8 @@ Last time: array algorithms
 This time: two-dimensional arrays
 
 ## Warmup
+- http://codingbat.com/prob/p102145
+- http://codingbat.com/prob/p169506
 
 
 ## Two-Dimensional Arrays
@@ -66,9 +68,63 @@ jagged[4] = new int[42];
 ```
 Most of the time you won't need to worry about jagged arrays, but make sure your `for`-loops are using `mat[i].length` just in case.
 
-## Homework
-### Self-Check:
+## Conway's Game of Life
+Today's programming project will be to develop Conway's Game of Life. 
 
-### Programming:
+The Game of Life takes place on a grid (2-dimensional array). Each cell of the grid is considered either "alive" or "dead." Each cell also interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent to the cell.
+
+The Game of Life proceeds in "generations", or steps. At each step, the following transitions occur:
+ - If the cell is "alive," there are three rules:
+   1. If the cell has fewer than two live neighbors, it dies--as if by under-population.
+   2. If the cell has more than three live neighbors, it dies--as if by over-population.
+   3. If a cell has exactly two or three live neighbors, it survives to the next generation.
+ - If the cell is "dead," the following rule applies:
+   1. If a dead cell has exactly three live neighbors, it becomes alive in the next generation, as if by reproduction.
+
+Each of these rules apply only to members of the next generation.
+
+### Implementation in Processing
+You should probably implement a couple of things:
+ - Design a grid with square cells. You should have a grid (`boolean[][] grid`)that represents the current generation, and another one that represents the next generation. After you've finished setting the grid for the next generation, you should swap the two grids.
+ - Design a method to activate cells in the grid by clicking on the screen. You should look for the `mouseX` and `mouseY` location and determine which cell of the grid it corresponds to. Every time the mouse clicks, it should make a cell active or inactive.
+ - Implement a method to draw the grid. Color "alive" cells differently from "dead" cells.
+ - Implement all the rules. You might want to consider the following method:
+   - `int getNumAliveNeighbors(boolean[][] grid, int i, int j)`, which gets the number of "alive" neighbors for the designated grid. Pay special attention to corner cases (what are the horizontal neighbors of the cell at `0,0`?)
+ - Have a way to "start" or "stop" the interaction. Perhaps it should be controlled by the `void keypressed()` function from Processing, which is called every time a key on the keyboard is pressed.
+
+After you're done, make sure it works. For example, the following patterns will continue forever:
+ - The "glider":
+```
+  X
+   X
+ XXX
+```
+ - The "Beacon"
+```
+ XX
+ X
+    X
+   XX
+```
+ - The "Pulsar"
+```
+   XXX   XXX
+
+ X    X X    X
+ X    X X    X
+ X    X X    X
+   XXX   XXX
+
+   XXX   XXX
+ X    X X    X
+ X    X X    X
+ X    X X    X
+
+   XXX   XXX
+```
+## Homework
+ - http://codingbat.com/doc/array.html
+ - https://practiceit.cs.washington.edu/problem/view/bjp3/chapter7/e19-matrixAdd
 
 ## More Info
+ - https://www.cs.utexas.edu/~scottm/cs312/handouts/slides/topic26_2DArrays_4Up.pdf
